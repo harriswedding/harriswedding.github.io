@@ -23,4 +23,7 @@ nav.navbar{
 .cover-heading
 {
   margin-top: 200px;
+  /* -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black; */
+   font-family: 'Lobster', cursive;
 }
