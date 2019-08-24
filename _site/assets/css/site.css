@@ -1,10 +1,26 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
 html,
 body {
   height: 100%;
 }
 body {
-  background-image: url("cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #022248;
+  padding-bottom: 60px;
+  background: url("cover.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  color:white;
+}
+nav.navbar{
+  background-color: #022248;
+  background-color: rgba(2, 34, 72, 0.5);
+}
+.cover-heading
+{
+  margin-top: 200px;
 }
