@@ -27,3 +27,7 @@ nav.navbar{
    -webkit-text-stroke-color: black; */
    font-family: 'Lobster', cursive;
 }
+
+#stars-bg {
+  background-color: black;
+}
