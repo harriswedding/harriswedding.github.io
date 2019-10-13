@@ -3,39 +3,55 @@ layout: default
 title: RSVP
 ---
 <div class="container">
-  <h1>
-    RSVP
-  </h1>
-  <h3>
-    <p>
-      Please RSVP by "undetermined date".
-    </p>
-  </h3>
+  <h1>RSVP</h1>
+  <em>Please RSVP by December 1, 2019</em>
 
-  <form id="rsvp-form-0">
+  <div class="row justify-content-center">
+    <div class="col-9">
 
-    <div>
-      <label>First Name</label>
-      <input class="form-control" type="text" name="FirstName" placeholder="First Name"/>
+      <form id="rsvp-form-0" class="text-left">
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="firstname">First Name</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="FirstName" id="firstname" placeholder="First Name"/>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="lastname">Last Name</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="LastName" id="lastname" placeholder="Last Name"/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-2">Going</div>
+          <div class="col-10">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="goingyes" name="Going" value="Yes" class="custom-control-input">
+              <label class="custom-control-label" for="goingyes">Yes</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="goingno" name="Going" value="No" class="custom-control-input">
+              <label class="custom-control-label" for="goingno">No</label>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-outline-light" type="button" id="add-person">Add Person</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-outline-light" type="button" id="submit-form">Submit</button>
+        </div>
+      </div>
+
     </div>
-
-    <div>
-      <label>Last Name</label>
-      <input class="form-control" type="text" name="LastName" placeholder="Last Name"/>
-    </div>
-
-    <div>
-      <label>Going?</label>
-      Yes: <input class="form-control" type="radio" name="Going" value="Yes" checked>
-      No: <input class="form-control" type="radio" name="Going" value="No">
-    </div>
-  </form>
-
-  <button class="btn btn-outline-light" type="button" id="add-person">Add Person</button>
-
-
-  <div>
-    <button class="btn btn-outline-light" type="button" id="submit-form">Submit</button>
   </div>
 
 </div>
