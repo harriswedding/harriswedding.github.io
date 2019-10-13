@@ -6,11 +6,9 @@
     <title>{{ site.title }} - {{ page.title }}</title>
     {% include styles.html %}
   </head>
-  <body id="nofade">
+  <body>
     {% include navbar.html %}
-    <div class="container text-center d-flex h-100 justify-content-center align-items-center">
-      {{ content}}
-    </div>
+    {{content}}
     {% include scripts.html %}
   </body>
 </html>
