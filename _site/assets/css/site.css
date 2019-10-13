@@ -9,11 +9,11 @@ body {
 body {
   background-color: #022248;
   padding-bottom: 60px;
-  background: url("cover.jpg") no-repeat center center fixed;
+  /* background: url("cover.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
   color:white;
 }
 nav.navbar{
