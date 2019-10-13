@@ -9,8 +9,8 @@ body {
 body {
   background-color: #022248;
   padding-bottom: 60px;
-  background: url("cover.jpg") no-repeat center center fixed;
-  background-image: linear-gradient(rgba(2, 34, 72, 0.8), rgba(2, 34, 72, 0.8)), url("cover.jpg");
+  background: url("../cover.jpg") no-repeat center center fixed;
+  background-image: linear-gradient(rgba(2, 34, 72, 0.8), rgba(2, 34, 72, 0.8)), url("../cover.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -28,72 +28,18 @@ nav.navbar{
    -webkit-text-stroke-color: black; */
    font-family: 'Lobster', cursive;
 }
-/*
-#stars-bg {
-  background-color: black;
-  background-image: url("../stars.jpg");
-  background-image: url('assets/stars.jpg'), -moz-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-  background-image: url('assets/stars.jpg'), -webkit-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-  background-image: url('assets/stars.jpg'), linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-} */
-/*
-#stars-bg {
-  background: #000 url('../stars.jpg') 0 0 no-repeat;
-
-  background: url('../stars.jpg'), -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(130,91,0,1) 100%);
-  background: url('../stars.jpg'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(130,91,0,1)));
-  background: url('../stars.jpg'), -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(130,91,0,1) 100%);
-  background: url('../stars.jpg'), -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(130,91,0,1) 100%);
-  background: url('../stars.jpg'), -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(130,91,0,1) 100%);
-  background: url('../stars.jpg'), linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(130,91,0,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#825b00',GradientType=0 );
-} */
-
-/* #stars-bg {
-  width: 200px;
-  height: 200px;
-  display: block;
-  position: relative;
-} */
-/*
-#stars-bg::after {
-  content: "";
-  background: url("../stars.jpg");
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-} */
 
 #stars {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
-  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
-  mask-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+  width: 100%;
+  /* -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1))); */
+  -webkit-mask-image:-webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1));
+  mask-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1));
 }
 
 #stars-bg {
   position: relative;
 }
-
-/*
-
-    background-color: transparent;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-
-    background-image: url('../stars.jpg');
-
-
-    background-image: url('../stars.jpg'), -moz-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-    background-image: url('../stars.jpg'), -webkit-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-    background-image: url('../stars.jpg'), linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-
-
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ADB2B6', endColorstr='#ABAEB3', GradientType=0);
-*/
