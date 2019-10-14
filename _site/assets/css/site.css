@@ -17,6 +17,23 @@ body {
   background-size: cover;
   color:white;
 }
+
+h1,
+h2,
+.cover-heading {
+  /* font-family: 'Bungee', sans-serif; */
+  font-family: 'Audiowide', sans-serif;
+}
+
+h3,
+h4,
+h5,
+h6,
+body {
+  /* font-family: 'Ropa Sans', sans-serif; */
+  font-family: 'Titillium Web', sans-serif;
+}
+
 nav.navbar{
   background-color: #022248;
   background-color: rgba(2, 34, 72, 0.5);
@@ -24,9 +41,6 @@ nav.navbar{
 .cover-heading
 {
   margin-top: 200px;
-  /* -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: black; */
-   font-family: 'Lobster', cursive;
 }
 
 #stars {
