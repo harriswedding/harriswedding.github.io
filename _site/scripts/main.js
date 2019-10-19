@@ -1,4 +1,29 @@
+// Show add button on going=yes
+$('input[name=Going]').change(function() {
+  if(this.value == 'Yes') {
+    $('#add-person').removeClass('d-none');
+  }
+  else {
+    $('#add-person').addClass('d-none');
+    $('.guest-form').remove();
+    numInputs = 0;
+  }
+});
 
+// Remove Guest
+$('body').on('click', '.remove-guest', function() {
+  $(this).closest('.guest-form').remove();
+  numInputs -= 1;
+  var forms = $('.guest-form');
+  for(var i = 0; i < forms.length; i++) {
+    var idParts = $(forms[i]).attr('id').split('-');
+    var id = parseInt(idParts[2]);
+    var newId = i+1;
+    if(id > newId) {
+      $(forms[i]).attr('id', 'rsvp-form-'+newId);
+    }
+  }
+})
 
 // RSVP Form
 $('#submit-form').on('click', function(e) {
@@ -13,27 +38,34 @@ $('#submit-form').on('click', function(e) {
         dataType: "json",
         data: $form.serialize(),
         success: function (){
-          console.log("success!")
+          console.log("success!");
         }
       });
   }
 })
 
+// Generated inputs
 var inputs = `
 <div class="form-group row">
-  <label class="col-sm-2 col-form-label" for="#firstname">First Name</label>
-  <div class="col-sm-10">
-    <input class="form-control" type="text" name="FirstName" id="firstname" placeholder="First Name"/>
+  <div class="col-lg-2">
+    <label>Additional Guest</label>
+  </div>
+  <div class="col-lg-9">
+    <div class="form-group row">
+      <div class="col">
+        <input class="form-control" type="text" name="FirstName" id="firstname" placeholder="First Name" autocomplete="off"/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col">
+        <input class="form-control" type="text" name="LastName" id="lastname" placeholder="Last Name" autocomplete="off"/>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-1 text-right">
+    <button class="btn btn-outline-danger remove-guest" type="button" data-remove=""><i class="fas fa-times"></i></button>
   </div>
 </div>
-
-<div class="form-group row">
-  <label class="col-sm-2 col-form-label" for="#lastname">Last Name</label>
-  <div class="col-sm-10">
-    <input class="form-control" type="text" name="LastName" id="lastname" placeholder="Last Name"/>
-  </div>
-</div>
-
 <div class="row d-none">
   <div class="col-2">Going</div>
   <div class="col-10">
@@ -51,7 +83,8 @@ var inputs = `
 
 var numInputs = 0;
 
+// Add name fields on add person
 $('#add-person').on('click', function(e) {
-  $("<form id='rsvp-form-" + (++numInputs) + "' class='text-left'>" + inputs + "</form>").insertAfter("#rsvp-form-" + (numInputs-1));
-
+  $("<form id='rsvp-form-" + (++numInputs) + "' class='guest-form'>" + inputs + "</form>").insertAfter("#rsvp-form-" + (numInputs-1));
+  $('#rsvp-form-'+numInputs+' .remove-guest').attr('data-remove', numInputs);
 })

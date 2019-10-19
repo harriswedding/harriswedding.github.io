@@ -36,50 +36,76 @@
     <div class="container text-center d-flex h-100 justify-content-center align-items-center">
   <div class="container">
   <h1>RSVP</h1>
-  <em>Please RSVP by December 1, 2019</em>
+  <div class="mb-3">
+    <em>Please RSVP by December 1, 2019</em>
+  </div>
 
-  <div class="row justify-content-center">
+
+  <div class="row justify-content-center text-left">
     <div class="col-9">
 
-      <form id="rsvp-form-0" class="text-left">
+      <form id="rsvp-form-0">
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label" for="firstname">First Name</label>
-          <div class="col-sm-10">
-            <input class="form-control" type="text" name="FirstName" id="firstname" placeholder="First Name"/>
+          <label class="col-lg-2 col-form-label" for="firstname">First Name</label>
+          <div class="col-lg-10">
+            <input class="form-control" type="text" name="FirstName" id="firstname" placeholder="First Name" autocomplete="off"/>
           </div>
         </div>
 
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label" for="lastname">Last Name</label>
-          <div class="col-sm-10">
-            <input class="form-control" type="text" name="LastName" id="lastname" placeholder="Last Name"/>
+          <label class="col-lg-2 col-form-label" for="lastname">Last Name</label>
+          <div class="col-lg-10">
+            <input class="form-control" type="text" name="LastName" id="lastname" placeholder="Last Name" autocomplete="off"/>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-2">Going</div>
+        <div class="form-group row">
+          <div class="col-2">Going?</div>
           <div class="col-10">
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="goingyes" name="Going" value="Yes" class="custom-control-input">
-              <label class="custom-control-label" for="goingyes">Yes</label>
+            <div class="custom-control custom-radio custom-control-inline pointer">
+              <input type="radio" id="goingyes0" name="Going" value="Yes" class="custom-control-input pointer">
+              <label class="custom-control-label pointer" for="goingyes0">Yes</label>
             </div>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="goingno" name="Going" value="No" class="custom-control-input">
-              <label class="custom-control-label" for="goingno">No</label>
+            <div class="custom-control custom-radio custom-control-inline pointer">
+              <input type="radio" id="goingno0" name="Going" value="No" class="custom-control-input pointer">
+              <label class="custom-control-label pointer" for="goingno0">No</label>
             </div>
           </div>
         </div>
       </form>
 
+      <!-- <form id="rsvp-form-0" class="text-left">
+        <div class="form-group row">
+          <div class="col-lg-2">
+            <label>Additional Guest</label>
+          </div>
+          <div class="col-lg-9">
+            <div class="form-group row">
+              <div class="col">
+                <input class="form-control" type="text" name="FirstName" id="firstname" placeholder="First Name"/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col">
+                <input class="form-control" type="text" name="LastName" id="lastname" placeholder="Last Name"/>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1 text-right">
+            <button class="btn btn-outline-danger" type="button" id="remove-"><i class="fas fa-times"></i></button>
+          </div>
+        </div>
+      </form> -->
+
       <div class="row">
-        <div class="col">
-          <button class="btn btn-outline-light" type="button" id="add-person">Add Person</button>
+        <div class="offset-2 col-10 text-left">
+          <button class="btn btn-outline-light d-none" type="button" id="add-person">Add Person</button>
         </div>
       </div>
 
       <div class="row">
-        <div class="col">
-          <button class="btn btn-outline-light" type="button" id="submit-form">Submit</button>
+        <div class="offset-4 col-4">
+          <button class="btn btn-outline-light btn-block btn-lg mt-3" type="button" id="submit-form">Submit</button>
         </div>
       </div>
 

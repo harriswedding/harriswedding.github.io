@@ -34,6 +34,10 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
+hr {
+  border-color: white;
+}
+
 nav.navbar{
   background-color: #022248;
   background-color: rgba(2, 34, 72, 0.5);
@@ -56,4 +60,41 @@ nav.navbar{
 
 #stars-bg {
   position: relative;
+}
+
+.img-link img {
+  border-bottom: 2px solid transparent;
+  width: 100%;
+  max-width: 400px;
+}
+
+.img-link:hover img {
+  border-bottom-color: white;
+}
+
+.form-control {
+  background-color: transparent;
+  color: white;
+}
+
+.form-control:focus,
+input:-internal-autofill-selected {
+  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.form-control::placeholder {
+  color: #999;
+}
+
+::placeholder,
+:-ms-input-placeholder,
+.form-control:-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.pointer:hover {
+  cursor: pointer;
 }
