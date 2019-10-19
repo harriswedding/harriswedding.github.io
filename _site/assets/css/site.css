@@ -77,8 +77,7 @@ nav.navbar{
   color: white;
 }
 
-.form-control:focus,
-input:-internal-autofill-selected {
+.form-control:focus {
   background-color: transparent;
   background-color: rgba(255, 255, 255, 0.2);
   color: white;

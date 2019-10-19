@@ -5,16 +5,16 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav mx-auto">
-      <li class="nav-item active">
+      <li class="nav-item {% if {{page.title}} contains 'Home' %}active{% endif %}">
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if {{page.title}} contains 'Info' %}active{% endif %}">
         <a class="nav-link" href="{{site.github.url}}/info.html">Info</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if {{page.title}} contains 'Registry' %}active{% endif %}">
         <a class="nav-link" href="{{site.github.url}}/registry.html">Registry</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if {{page.title}} contains 'RSVP' %}active{% endif %}">
         <a class="nav-link" href="{{site.github.url}}/rsvp.html">RSVP</a>
       </li>
     </ul>
