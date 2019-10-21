@@ -1,3 +1,10 @@
+$('.toast').toast({
+  // autohide: false,
+  delay: 10000
+});
+
+ // $('.toast').toast('show');
+
 // Show add button on going=yes
 $('input[name=Going]').change(function() {
   if(this.value == 'Yes') {
@@ -23,7 +30,7 @@ $('body').on('click', '.remove-guest', function() {
       $(forms[i]).attr('id', 'rsvp-form-'+newId);
     }
   }
-})
+});
 
 // RSVP Form
 $('#submit-form').on('click', function(e) {
@@ -37,12 +44,33 @@ $('#submit-form').on('click', function(e) {
         method: "GET",
         dataType: "json",
         data: $form.serialize(),
+        beforeSend: function() {
+          $('#form-spinner').removeClass('d-none');
+          $('#submit-form').attr('disabled', 'true');
+        },
+        complete: function() {
+          $('#form-spinner').addClass('d-none');
+        },
         success: function (){
+          $('#success-toast').toast('show');
           console.log("success!");
+          $('#submit-form').attr('disabled', 'true');
+          $('.guest-form').remove();
+          clearInputs();
+        },
+        error: function () {
+          $('#error-toast').toast('show');
+          console.log("error");
+          $('#submit-form').attr('disabled', 'false');
         }
       });
   }
 })
+
+function clearInputs() {
+  $('#goingyes0').prop('checked', false);
+  $('#goingno0').prop('checked', false);
+}
 
 // Generated inputs
 var inputs = `
