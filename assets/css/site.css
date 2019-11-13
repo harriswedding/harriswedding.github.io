@@ -47,6 +47,7 @@ nav.navbar{
   margin-top: 200px;
 }
 
+/* Info */
 #stars {
   position: absolute;
   left: 0;
@@ -62,6 +63,44 @@ nav.navbar{
   position: relative;
 }
 
+/* xs devices */
+.star-wars-scroll {
+  font-size: 1.5em;
+}
+
+.star-wars-scroll p {
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.star-wars-scroll .star-wars-header {
+  margin-top: 40%;
+  margin-bottom: 40%;
+  font-size: 200%;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .star-wars-scroll {
+    font-size: 2em;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .star-wars-scroll {
+    font-size: 3em;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .star-wars-scroll {
+    font-size: 3em;
+  }
+}
+
+/* Registry */
 .img-link img {
   border-bottom: 2px solid transparent;
   width: 100%;
@@ -72,6 +111,7 @@ nav.navbar{
   border-bottom-color: white;
 }
 
+/* RSVP */
 .form-control {
   background-color: transparent;
   color: white;
